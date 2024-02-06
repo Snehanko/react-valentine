@@ -16,23 +16,29 @@ function App() {
   const [yesPressed, setYesPressed] = useState(false)
   const yesButtonSize = noCount * 20 + 16;
 
+  const handleClick = () => {
+    setNoCount(prevValue => prevValue + 1)
+  }
+  const getNoButtonText = () => {
+    return phrases[Math.min(noCount, phrases.length - 1)];
+  }
+
   return (
-    <div className='valentine'>
+    <div className='valentine-container'>
       {
-        yesPressed ? (<>
+        yesPressed ? (<div>
           <img
             alt='bear-kissing'
             src="https://tenor.com/view/bear-kiss-bear-kisses-kiss-kisses-love-gif-22536058.gif"
           />
           <div className='text'>Yayyy!!!</div>
-        </>)
+        </div>)
           :
-          (<>
+          (<div>
             <img
               alt='sorry-feeling-bear'
               src='https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif'
             />
-
             <div>Will you be my valentine?</div>
             <div>
               <button
@@ -43,10 +49,10 @@ function App() {
               </button>
               <button onClick={handleClick}
                 className='noButton'>
-                No
+                {getNoButtonText()}
               </button>
             </div>
-          </>)
+          </div>)
       }
     </div>
   )
