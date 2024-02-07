@@ -5,3 +5,21 @@
     justify-content: center;
     height:100vh;
 }
+
+.image{
+    height: auto;
+    width: 200px;
+    max-width: 100%;
+}
+
+.data-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.yesButton{
+    background-color: red;
+    /* border-radius: 25px; */
+}
