@@ -72,7 +72,7 @@ function App() {
             src={noCount < bearGifs2.length - 1 ? bearGifs2[noCount + 1].image : bearGifs2[bearGifs2.length - 1].image}
             className="image"
           />
-          <div>Will you be my valentine?</div>
+          {(noCount > 0 ? <div>Are you Sure?????</div> : <div>Will you be my valentine?</div>)}
           <button
             className="yesButton"
             id="button"
