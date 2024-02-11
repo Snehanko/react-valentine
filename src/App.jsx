@@ -21,7 +21,7 @@ const bearGifs2 = [
   {
     id: 4,
     phrases: "Pookie please",
-    image: "https://tenor.com/view/love-you-gif-20040131.gif",
+    image: "https://tenor.com/view/milk-mocha-milkandmochabears-cute-sad-gif-6687707215043094293.gif",
   },
   {
     id: 5,
@@ -32,7 +32,7 @@ const bearGifs2 = [
   {
     id: 6,
     phrases: "I'm gonan cry....",
-    image: "https://tenor.com/view/sad-bear-cry-tear-im-sad-gif-16984957.gif",
+    image: "https://tenor.com/view/love-you-gif-20040131.gif",
   },
   {
     id: 7,

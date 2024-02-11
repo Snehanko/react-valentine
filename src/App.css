@@ -23,3 +23,12 @@
     background-color: red;
     /* border-radius: 25px; */
 }
+
+.noButton{
+    border: 1px solid white;
+    margin: .5rem;
+    padding: .3rem;
+    border-radius: 40px;
+    font-weight: 500;
+    background-color: pink;
+}
