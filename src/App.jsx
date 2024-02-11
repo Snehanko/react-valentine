@@ -81,6 +81,7 @@ function App() {
               borderRadius: yesButtonSize * 0.5,
               width: yesButtonSize * 3,
               heightwidth: yesButtonSize * 3,
+              maxWidth: '408px'
             }}
             onClick={() => setYesPressed(true)}
           >Yes</button>
