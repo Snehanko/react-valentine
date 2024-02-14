@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./App.css";
 import bgMusic from "./assets/Until-I-Found-You.mp3"
 
