@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
+import bgMusic from "./assets/Until-I-Found-You.mp3"
+
 
 const bearGifs2 = [
   {
@@ -54,6 +56,12 @@ function App() {
     return bearGifs2[Math.min(noCount, bearGifs2.length - 1)].phrases;
   };
 
+  function playMusic() {
+    new Audio(bgMusic).play()
+  }
+
+
+
   return (
     <div className="valentine-container">
       {yesPressed ? (
@@ -72,7 +80,7 @@ function App() {
             src={noCount < bearGifs2.length - 1 ? bearGifs2[noCount + 1].image : bearGifs2[bearGifs2.length - 1].image}
             className="image"
           />
-          {(noCount > 0 ? <div>Are you Sure?????</div> : <div>Will you be my valentine?</div>)}
+          {(noCount > 0 ? <div>{noCount < bearGifs2.length - 1 ? bearGifs2[noCount].phrases : bearGifs2[bearGifs2.length - 1].phrases}</div> : <div>Will you be my valentine?</div>)}
           <button
             className="yesButton"
             id="button"
@@ -83,7 +91,10 @@ function App() {
               heightwidth: yesButtonSize * 3,
               maxWidth: '408px'
             }}
-            onClick={() => setYesPressed(true)}
+            onClick={() => {
+              setYesPressed(true)
+              playMusic()
+            }}
           >Yes</button>
           <button onClick={handleClick} className="noButton">
             {getNoButtonText()}
